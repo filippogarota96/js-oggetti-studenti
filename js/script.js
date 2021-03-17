@@ -14,8 +14,54 @@ eta: 19
 
 //Stampo tutte le proprietà dell'oggetto
 
-for( var key in studente) {
-    console.log(studente[key]);
+for ( var key in studente) {
+ console.log(studente[key]);
 }
 
+//creo array di oggetti 
+
+var objStudenti = [
+  {
+    nome: "Anna",
+    cognome: "Pannocchia",
+    eta: 21
+  },
+
+  {
+    nome: "Fabbio",
+    cognome: "Di Ninno",
+    eta: 23
+  },
+
+  {
+    nome: "Ivo",
+    cognome: "Avido",
+    eta: 22
+  }
+]
+
+//Ciclo l'array e stampo nome e cognome
+
+for (var i = 0; i < objStudenti.length; i++) {
+  console.log(objStudenti[i].nome + " " + objStudenti[i].cognome);
+  
+}
+
+//Chiedo all'utente di inserire nome, cognome e età
+
+var nuovoStudente = {};
+
+var userName = prompt('Inserisci il nome');
+var userSurname = prompt('Inserisci il cognome');
+var userAge = parseInt(prompt("Inserisci l'età"));
+//Inserisco i dati nell'oggetto
+
+nuovoStudente.nome = userName;
+nuovoStudente.cognome = userSurname;
+nuovoStudente.eta = userAge;
+
+//Inserisco l'oggetto dentro l'array
+objStudenti.push(nuovoStudente);
+
+console.log(objStudenti);
 
